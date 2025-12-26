@@ -1,2 +1,2 @@
 # LeetCode
-A solution bank in Swift, Go[learn as you go] &amp; Python[learn as you go] with explanations.
+Here I commit my practice for leetcode questions in Python, Swift & Go with explanations.

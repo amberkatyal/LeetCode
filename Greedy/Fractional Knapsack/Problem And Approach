@@ -1,0 +1,27 @@
+You are given n items of different weights & values.
+weights array and values array in same matching order for each item.
+You have a knapsack of capacity c.
+You need to achieve the maximum profit by filling the knapsack of capacity c not overflowing it.
+You can fill the items in fraction as well.
+
+E.g.
+    Input: val[] = [60, 100, 120], wt[] = [10, 20, 30], capacity = 50
+    Output: 240 
+    Explanation: We will take the items of weight 10kg and 20kg and 2/3 fraction of 30kg. 
+    Hence total value will be 60 + 100 + (2/3) * 120 = 240.
+
+    Input: val[] = [500], wt[] = [30], capacity = 10
+    Output: 166.667
+
+
+
+
+Intuition:
+Greedy algorithm suggest to find the most greedy option at each step which gets the immediate benefit.
+To find the rule to apply that here we would need to actually know per weight how much value each item gives because we can do fractions here as well.
+Can do so as value of weight 1 : value/weight.
+We can simply iterate and find in this new array and fill the items as per the fractions accordingly.
+We would not compare and worry while writing code because thats not the greedy approach. Greedy is there to find the optimal solution not the perfect one.
+With logic we know this is greedy before even writing the code as it we are taking the items based on highest value offering per weight and then filling them fractionally later by the least ones and since there are only one item means one item cant be used again to fill the knapsack this would give the highest always and a natural greedy problem.
+How to write the fractional check and code?
+We see the remaining capacity while checking the weight of the next item in the list if it the weight overflows we fraction it using the value of 1 * remaining capacity. End the iteration when knapsack if full and return the answer.
